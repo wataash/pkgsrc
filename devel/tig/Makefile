@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.15 2017/01/04 18:16:32 roy Exp $
 
-DISTNAME=	tig-1.2.1
+DISTNAME=	tig-2.4.1
 PKGREVISION=	3
 CATEGORIES=	devel scm
-MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
+MASTER_SITES=	https://github.com/jonas/tig/releases/download/tig-2.4.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jonas.nitro.dk/tig/
@@ -38,7 +38,9 @@ CFLAGS+=	-D_BSD_SOURCE
 .endif
 
 BUILD_TARGET=	all doc
+BUILD_TARGET=	all
 INSTALL_TARGET=	install install-doc
+INSTALL_TARGET=	install
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR} && \
